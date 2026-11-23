@@ -29,3 +29,53 @@ document.addEventListener("click", function (e) {
   var t = e.target;
   if (t && t.classList && t.classList.contains("print-btn")) { e.preventDefault(); window.print(); }
 });
+/* Envío por email y lista de espera (solo en la versión publicada con PHP). */
+document.addEventListener("submit", function (e) {
+  var f = e.target;
+  if (!f || !f.classList || !f.classList.contains("lead")) return;
+  e.preventDefault();
+  var st = f.querySelector(".lead-status");
+  if (f.getAttribute("data-estado") !== "activo") {
+    if (st) { st.className = "lead-status note"; st.textContent = "Disponible en la versión publicada (GitHub Pages es estático)."; }
+    return;
+  }
+  var email = (f.querySelector('input[name="email"]') || {}).value || "";
+  var rgpd = !!(f.querySelector('input[name="rgpd"]') || {}).checked;
+  var com = !!(f.querySelector('input[name="comercial"]') || {}).checked;
+  var hp = (f.querySelector('input[name="website"]') || {}).value || "";
+  var btn = f.querySelector('button[type="submit"]');
+  function show(ok, msg) {
+    if (!st) return;
+    st.className = "lead-status note" + (ok ? " ok" : "");
+    st.textContent = msg;
+  }
+  if (!email.trim() || email.indexOf("@") < 1) { show(false, "Introduce una dirección de correo válida."); return; }
+  if (!rgpd) { show(false, "Debes marcar la casilla de consentimiento antes de enviar."); return; }
+  var payload = {
+    modo: f.getAttribute("data-form") === "espera" ? "espera" : "resultado",
+    email: email.trim(), consent: true, comercial: com, website: hp,
+    calculadora: (document.querySelector(".hero h1") || {}).textContent || document.title,
+    url: location.href
+  };
+  if (payload.modo === "resultado") {
+    payload.cifra = (document.getElementById("o-big") || {}).textContent || "";
+    payload.unidad = (document.getElementById("o-big-l") || {}).textContent || "";
+    payload.sub = (document.getElementById("o-sub") || {}).innerText.replace(/\s+/g, " ").trim();
+    payload.filas = [];
+    document.querySelectorAll("#t1 tr").forEach(function (tr) {
+      var cells = tr.querySelectorAll("th,td");
+      if (cells.length >= 2) {
+        var k = cells[0].textContent.trim();
+        var v = Array.prototype.slice.call(cells, 1).map(function (c) { return c.textContent.trim(); }).filter(Boolean).join(" · ");
+        if (k && v && k.toLowerCase() !== "concepto") payload.filas.push([k, v]);
+      }
+    });
+  }
+  if (btn) btn.disabled = true;
+  show(true, "Enviando…");
+  fetch("../api/enviar.php", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+    .then(function (r) { return r.json().catch(function () { return { ok: false, error: "Respuesta no válida del servidor." }; }); })
+    .then(function (d) { show(!!d.ok, d.ok ? d.message : (d.error || "No se pudo enviar.")); })
+    .catch(function () { show(false, "Error de conexión al enviar. Puedes usar «Descargar o imprimir (PDF)»."); })
+    .finally(function () { if (btn) btn.disabled = false; });
+});

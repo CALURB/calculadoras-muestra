@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="googlebot" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Calculadora de IVA: añadir o quitar el 21, 10 o 4 % · Neto y Bruto</title>
+<meta name="description" content="Añade o quita el IVA de un precio al 21, 10, 4 o 0 % y obtén la base imponible y la cuota.">
+<meta property="og:title" content="Calculadora de IVA: añadir o quitar el 21, 10 o 4 %">
+<meta property="og:description" content="Añade o quita el IVA de un precio al 21, 10, 4 o 0 % y obtén la base imponible y la cuota.">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="test-banner"><div class="wrap">Versión de pruebas · no indexada · resultados orientativos</div></div>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="../">Neto <span>y</span> Bruto</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="toolnav">Calculadoras</button>
+  <span class="year" aria-hidden="true">2026</span>
+</div>
+<nav class="toolnav" id="toolnav" aria-label="Calculadoras"><div class="wrap"><ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/" aria-current="page">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul></div></nav>
+</header>
+<main id="main" class="wrap">
+<section class="hero"><h1>Calculadora de IVA: añadir o quitar el 21, 10 o 4 %</h1><p class="lede">Añade o quita el IVA de un precio y separa la base y la cuota.</p></section>
+<section class="panel">
+  <form class="inputs" id="f" novalidate><fieldset><legend>Qué quieres hacer</legend><div class="seg"><label><input type="radio" name="modo" value="anadir" checked>Añadir IVA</label><label><input type="radio" name="modo" value="quitar">Quitar IVA</label></div></fieldset><fieldset><label class="label" for="imp" id="imp-l">Precio sin IVA (€)</label><input id="imp" type="number" inputmode="decimal" min="0" step="0.01" value="100"></fieldset><fieldset><label class="label" for="tipo" id="tipo-l">Tipo de IVA</label><select id="tipo"><option value="21" selected>General · 21 %</option><option value="10">Reducido · 10 %</option><option value="4">Superreducido · 4 %</option><option value="0">Exento o 0 %</option></select></fieldset></form>
+  <div class="out" aria-live="polite" id="out">
+    <div class="big"><span class="num" id="o-big">—</span><span class="unit" id="o-big-l">con IVA</span></div>
+    <div class="sub" id="o-sub"></div>
+    <div id="o-notes"></div>
+    <div class="table-scroll"><table class="ledger" id="t1"></table></div>
+    <div class="table-scroll"><table class="ledger" id="t2"></table></div>
+  </div>
+</section>
+<section class="doc">
+  <div class="cols">
+    <div><h2>Cómo se calcula</h2><ul><li>Añadir: cuota = base × tipo; total = base + cuota.</li><li>Quitar: base = total ÷ (1 + tipo), redondeada al céntimo; cuota = total − base.</li><li>Tipos de la Ley 37/1992: general 21 % (art. 90), reducido 10 % y superreducido 4 % (art. 91).</li></ul></div>
+    <div><h2>Qué no cubre</h2><ul><li>Qué tipo corresponde a cada producto o servicio: depende de la ley y conviene confirmarlo.</li><li>Canarias (IGIC), Ceuta y Melilla (IPSI), recargo de equivalencia y regímenes especiales.</li></ul></div>
+  </div>
+  <div class="cols">
+    <div><h2>Comprobación</h2><p>Aritmética directa; casos comprobados a mano en el <a href=../VALIDACION.md>registro de validación</a> (100 € + 21 % = 121 €; 121 € − 21 % = 100 €).</p></div>
+    <div><h2>Fuentes oficiales</h2><ul class="src"><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1992-28740" rel="noopener">Ley 37/1992 del IVA, arts. 90 y 91 (BOE)</a></li></ul></div>
+  </div>
+  <div class="cta"><p>¿Llevas las nóminas o la facturación de tu empresa? En Enginai desarrollamos software y webs a medida para pymes.</p><a href="https://enginaiglobalsolutions.com" rel="noopener">Conocer Enginai →</a></div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h2>Aviso legal</h2>
+      <p>Herramientas informativas en versión de pruebas. Los resultados son estimaciones orientativas con la normativa general de 2026 y no constituyen asesoramiento laboral, fiscal ni jurídico. No sustituyen a tu nómina, a tu asesoría ni a los servicios oficiales (AEAT, Seguridad Social, SEPE, juzgados). No nos hacemos responsables de las decisiones tomadas a partir de estos cálculos. Cifras revisadas el 23 de noviembre de 2026.</p>
+      <h2 class="mt">Privacidad</h2>
+      <p>Sin cookies, analítica ni rastreadores. Los cálculos se hacen en tu navegador y lo que escribes no se envía a ningún servidor.</p>
+    </div>
+    <div>
+      <h2>Calculadoras</h2>
+      <ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul>
+    </div>
+  </div>
+  <p class="credit">Diseño y desarrollo: <a href="https://enginaiglobalsolutions.com" rel="noopener">Enginai Global Solutions</a></p>
+</div></footer>
+<script src="../assets/ui.js"></script><script src="../assets/calc-extra.js"></script><script src="../assets/p-iva.js"></script>
+</body>
+</html>

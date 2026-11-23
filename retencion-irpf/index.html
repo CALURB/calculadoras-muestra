@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="googlebot" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Calculadora de retención de IRPF 2026 en la nómina · Neto y Bruto</title>
+<meta name="description" content="Calcula el tipo de retención de IRPF de tu nómina en 2026 con el algoritmo oficial de la AEAT, comprobado contra su servicio de cálculo.">
+<meta property="og:title" content="Calculadora de retención de IRPF 2026 en la nómina">
+<meta property="og:description" content="Calcula el tipo de retención de IRPF de tu nómina en 2026 con el algoritmo oficial de la AEAT, comprobado contra su servicio de cálculo.">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="test-banner"><div class="wrap">Versión de pruebas · no indexada · resultados orientativos</div></div>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="../">Neto <span>y</span> Bruto</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="toolnav">Calculadoras</button>
+  <span class="year" aria-hidden="true">2026</span>
+</div>
+<nav class="toolnav" id="toolnav" aria-label="Calculadoras"><div class="wrap"><ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/" aria-current="page">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul></div></nav>
+</header>
+<main id="main" class="wrap">
+<section class="hero"><h1>Calculadora de retención de IRPF 2026 en la nómina</h1><p class="lede">El porcentaje de IRPF que te retendrán en nómina en 2026, paso a paso con el algoritmo oficial de la AEAT.</p></section>
+<section class="panel">
+  <form class="inputs" id="f" novalidate><fieldset><label class="label" for="n-bruto" id="n-bruto-l">Retribución bruta anual (€)</label><input id="n-bruto" type="number" inputmode="decimal" min="0" step="100" value="30000"></fieldset><div class="row2"><fieldset><label class="label" for="n-contrato" id="n-contrato-l">Contrato</label><select id="n-contrato"><option value="indefinido">Indefinido</option><option value="temporal">Temporal</option></select></fieldset><fieldset><label class="label" for="n-grupo" id="n-grupo-l">Grupo de cotización</label><select id="n-grupo"><option value="1">1 · Ingenieros y licenciados</option><option value="2">2 · Ingenieros técnicos</option><option value="3">3 · Jefes administrativos y de taller</option><option value="4-7" selected>4 a 7 · Ayudantes, oficiales, subalternos, auxiliares</option><option value="8-11">8 a 11 · Oficiales y peones (base diaria)</option></select></fieldset></div><label class="check" id="n-inf-wrap" hidden><input type="checkbox" id="n-inf"> El contrato dura menos de un año (retención mínima del 2 %)</label><fieldset><label class="label" for="n-sit" id="n-sit-l">Situación familiar (modelo 145)</label><select id="n-sit"><option value="3" selected>Otras situaciones (soltero/a, o cónyuge con rentas &gt; 1.500 €)</option><option value="2">Casado/a, cónyuge con rentas ≤ 1.500 € al año</option><option value="1">Monoparental con hijos a cargo en exclusiva</option></select></fieldset><div class="row2"><fieldset><label class="label" for="n-hijos" id="n-hijos-l">Hijos menores de 25</label><input id="n-hijos" type="number" inputmode="decimal" min="0" max=16 step="1" value="0"></fieldset><fieldset><label class="label" for="n-hijos3" id="n-hijos3-l">De ellos, menores de 3</label><input id="n-hijos3" type="number" inputmode="decimal" min="0" max=16 step="1" value="0"></fieldset></div><label class="check"><input type="checkbox" id="n-comp"> Los hijos conviven también con el otro progenitor (mínimo al 50 %)</label><fieldset><label class="label" for="n-nac" id="n-nac-l">Año de nacimiento</label><input id="n-nac" type="number" inputmode="decimal" min="1920" max=2010 step="1" value="1990"><p class=hint>Desde los 65 años el mínimo personal sube.</p></fieldset></form>
+  <div class="out" aria-live="polite" id="out">
+    <div class="big"><span class="num" id="o-big">—</span><span class="unit" id="o-big-l">de retención</span></div>
+    <div class="sub" id="o-sub"></div>
+    <div id="o-notes"></div>
+    <div class="table-scroll"><table class="ledger" id="t1"></table></div>
+    <div class="table-scroll"><table class="ledger" id="t2"></table></div>
+  </div>
+</section>
+<section class="doc">
+  <div class="cols">
+    <div><h2>Cómo se calcula</h2><ul><li>Mismo motor que el sueldo neto: algoritmo AEAT 2026, versión del 10 de septiembre.</li><li>Las cotizaciones del trabajador se calculan con la Orden de cotización 2026 y se restan como gasto deducible.</li><li>El tipo se trunca a dos decimales y el importe se redondea al céntimo, como hace la AEAT.</li></ul></div>
+    <div><h2>Qué no cubre</h2><ul><li>País Vasco y Navarra (IRPF foral), Ceuta, Melilla y La Palma.</li><li>Discapacidad, ascendientes, movilidad geográfica, pensión compensatoria, anualidades por alimentos y préstamo de vivienda anterior a 2013.</li><li>Jornada parcial, bonificaciones de cuotas, contratos de formación o de 30 días o menos, horas extra, retribución en especie, incapacidad temporal y regularizaciones.</li></ul></div>
+  </div>
+  <div class="cols">
+    <div><h2>Comprobación</h2><p>Siete casos enviados el 23/11/2026 al servicio oficial de cálculo de retenciones de la AEAT: tipo e importe coinciden al céntimo en todos.</p><div class="table-scroll"><table class="ledger small"><thead><tr><th scope=col>Caso</th><th scope=col>Aquí</th><th scope=col>AEAT</th><th scope=col>Sello AEAT</th></tr></thead><tbody><tr><th scope=row>A · 22.000 €, soltero/a sin hijos, indefinido, 14 pagas</th><td>11,96 %</td><td>11,96 %</td><td><code>9E44283DF606M</code></td></tr><tr><th scope=row>B · 30.000 €, casado/a con cónyuge sin rentas (sit. 2), 2 hijos (2015 y 2024)</th><td>11,25 %</td><td>11,25 %</td><td><code>31622EC13FAAM</code></td></tr><tr><th scope=row>C · 70.000 €, sin hijos (por encima de la base máxima)</th><td>26,64 %</td><td>26,64 %</td><td><code>00E1E7C61593M</code></td></tr><tr><th scope=row>D · 18.000 €, temporal de menos de un año</th><td>5,07 %</td><td>5,07 %</td><td><code>4ACDE6A32062M</code></td></tr><tr><th scope=row>E · 16.500 €, monoparental (sit. 1) con 1 hijo (2020)</th><td>0,00 %</td><td>0,00 %</td><td><code>A98ACA7B5EFFM</code></td></tr><tr><th scope=row>F · 40.000 €, sit. 3 con 3 hijos (2012, 2016, 2025), mayor de 65 no</th><td>12,60 %</td><td>12,60 %</td><td><code>462F203BA314M</code></td></tr><tr><th scope=row>G · 25.000 €, 67 años (nacido 1959), sin hijos</th><td>13,22 %</td><td>13,22 %</td><td><code>45ABF404E5C6M</code></td></tr></tbody></table></div></div>
+    <div><h2>Fuentes oficiales</h2><ul class="src"><li><a href="https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/Algoritmo%20Retenciones-2026_10sept.pdf" rel="noopener">AEAT · Algoritmo de retenciones 2026 (10/09/2026)</a></li><li><a href="https://sede.agenciatributaria.gob.es/Sede/Retenciones.shtml" rel="noopener">AEAT · Retenciones 2026</a></li><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764" rel="noopener">Ley 35/2006 del IRPF, art. 101 (BOE)</a></li><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-7296" rel="noopener">Orden PJC/297/2026, de cotización 2026 (BOE)</a></li></ul></div>
+  </div>
+  <div class="cta"><p>¿Llevas las nóminas o la facturación de tu empresa? En Enginai desarrollamos software y webs a medida para pymes.</p><a href="https://enginaiglobalsolutions.com" rel="noopener">Conocer Enginai →</a></div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h2>Aviso legal</h2>
+      <p>Herramientas informativas en versión de pruebas. Los resultados son estimaciones orientativas con la normativa general de 2026 y no constituyen asesoramiento laboral, fiscal ni jurídico. No sustituyen a tu nómina, a tu asesoría ni a los servicios oficiales (AEAT, Seguridad Social, SEPE, juzgados). No nos hacemos responsables de las decisiones tomadas a partir de estos cálculos. Cifras revisadas el 23 de noviembre de 2026.</p>
+      <h2 class="mt">Privacidad</h2>
+      <p>Sin cookies, analítica ni rastreadores. Los cálculos se hacen en tu navegador y lo que escribes no se envía a ningún servidor.</p>
+    </div>
+    <div>
+      <h2>Calculadoras</h2>
+      <ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul>
+    </div>
+  </div>
+  <p class="credit">Diseño y desarrollo: <a href="https://enginaiglobalsolutions.com" rel="noopener">Enginai Global Solutions</a></p>
+</div></footer>
+<script src="../assets/ui.js"></script><script src="../assets/calc.js"></script><script src="../assets/p-retencion-irpf.js"></script>
+</body>
+</html>

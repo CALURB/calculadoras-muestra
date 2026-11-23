@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="googlebot" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Calculadora de factura de autónomo con IVA y retención de IRPF · Neto y Bruto</title>
+<meta name="description" content="Calcula el total de una factura de autónomo con IVA y retención de IRPF del 15 o del 7 %, o la base que necesitas para cobrar un líquido.">
+<meta property="og:title" content="Calculadora de factura de autónomo con IVA y retención de IRPF">
+<meta property="og:description" content="Calcula el total de una factura de autónomo con IVA y retención de IRPF del 15 o del 7 %, o la base que necesitas para cobrar un líquido.">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="test-banner"><div class="wrap">Versión de pruebas · no indexada · resultados orientativos</div></div>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="../">Neto <span>y</span> Bruto</a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="toolnav">Calculadoras</button>
+  <span class="year" aria-hidden="true">2026</span>
+</div>
+<nav class="toolnav" id="toolnav" aria-label="Calculadoras"><div class="wrap"><ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/" aria-current="page">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul></div></nav>
+</header>
+<main id="main" class="wrap">
+<section class="hero"><h1>Calculadora de factura de autónomo con IVA y retención de IRPF</h1><p class="lede">Cuánto cobrar en una factura con IVA y retención de IRPF, o qué base necesitas para recibir un importe concreto.</p></section>
+<section class="panel">
+  <form class="inputs" id="f" novalidate><fieldset><legend>Parto de</legend><div class="seg"><label><input type="radio" name="modo" value="base" checked>Sé la base</label><label><input type="radio" name="modo" value="total">Sé lo que quiero cobrar</label></div></fieldset><fieldset><label class="label" for="imp" id="imp-l">Base imponible (€)</label><input id="imp" type="number" inputmode="decimal" min="0" step="0.01" value="1000"></fieldset><div class="row2"><fieldset><label class="label" for="iva" id="iva-l">IVA</label><select id="iva"><option value="21" selected>21 %</option><option value="10">10 %</option><option value="4">4 %</option><option value="0">0 % / exento</option></select></fieldset><fieldset><label class="label" for="ret" id="ret-l">Retención IRPF</label><select id="ret"><option value="15" selected>15 % (general)</option><option value="7">7 % (inicio de actividad)</option><option value="0">Sin retención</option></select></fieldset></div><label class="check"><input type="checkbox" id="re"> Mi cliente está en recargo de equivalencia</label></form>
+  <div class="out" aria-live="polite" id="out">
+    <div class="big"><span class="num" id="o-big">—</span><span class="unit" id="o-big-l">total a cobrar</span></div>
+    <div class="sub" id="o-sub"></div>
+    <div id="o-notes"></div>
+    <div class="table-scroll"><table class="ledger" id="t1"></table></div>
+    <div class="table-scroll"><table class="ledger" id="t2"></table></div>
+  </div>
+</section>
+<section class="doc">
+  <div class="cols">
+    <div><h2>Cómo se calcula</h2><ul><li>Total = base + IVA (+ recargo de equivalencia) − retención de IRPF.</li><li>Retención del 15 % para actividades profesionales y del 7 % en el año de inicio y los dos siguientes (art. 101.5 LIRPF y art. 95 RIRPF).</li><li>Modo inverso: base = líquido ÷ (1 + IVA + recargo − retención).</li></ul></div>
+    <div><h2>Qué no cubre</h2><ul><li>Si tu actividad lleva retención (no todas: p. ej., muchas actividades empresariales en estimación directa no la llevan).</li><li>Requisitos de VERI*FACTU y formato legal de la factura.</li><li>Canarias, Ceuta y Melilla.</li></ul></div>
+  </div>
+  <div class="cols">
+    <div><h2>Comprobación</h2><p>Casos a mano en el <a href=../VALIDACION.md>registro de validación</a>: base 1.000 € al 21 % y 15 % → total 1.060 €; y a la inversa, 1.060 € → base 1.000 €.</p></div>
+    <div><h2>Fuentes oficiales</h2><ul class="src"><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1992-28740" rel="noopener">Ley 37/1992 del IVA, arts. 90 y 91 (BOE)</a></li><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764" rel="noopener">Ley 35/2006 del IRPF, art. 101 (BOE)</a></li><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-6820" rel="noopener">Reglamento del IRPF, art. 95 (BOE)</a></li></ul></div>
+  </div>
+  <div class="cta"><p>¿Llevas las nóminas o la facturación de tu empresa? En Enginai desarrollamos software y webs a medida para pymes.</p><a href="https://enginaiglobalsolutions.com" rel="noopener">Conocer Enginai →</a></div>
+</section>
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h2>Aviso legal</h2>
+      <p>Herramientas informativas en versión de pruebas. Los resultados son estimaciones orientativas con la normativa general de 2026 y no constituyen asesoramiento laboral, fiscal ni jurídico. No sustituyen a tu nómina, a tu asesoría ni a los servicios oficiales (AEAT, Seguridad Social, SEPE, juzgados). No nos hacemos responsables de las decisiones tomadas a partir de estos cálculos. Cifras revisadas el 23 de noviembre de 2026.</p>
+      <h2 class="mt">Privacidad</h2>
+      <p>Sin cookies, analítica ni rastreadores. Los cálculos se hacen en tu navegador y lo que escribes no se envía a ningún servidor.</p>
+    </div>
+    <div>
+      <h2>Calculadoras</h2>
+      <ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul>
+    </div>
+  </div>
+  <p class="credit">Diseño y desarrollo: <a href="https://enginaiglobalsolutions.com" rel="noopener">Enginai Global Solutions</a></p>
+</div></footer>
+<script src="../assets/ui.js"></script><script src="../assets/calc-extra.js"></script><script src="../assets/p-factura-autonomo.js"></script>
+</body>
+</html>

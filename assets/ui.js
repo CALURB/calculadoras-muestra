@@ -24,3 +24,8 @@
   });
   root.UI={eur:eur,eur0:eur0,pct:pct,n2:n2,$:$,num:num,esc:esc,ledger:ledger,notes:notes,bind:bind,radio:radio};
 })(this);
+/* Descargar o imprimir el resultado: usa la impresión del navegador (sin enviar datos). */
+document.addEventListener("click", function (e) {
+  var t = e.target;
+  if (t && t.classList && t.classList.contains("print-btn")) { e.preventDefault(); window.print(); }
+});

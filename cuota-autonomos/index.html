@@ -4,12 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<meta name="googlebot" content="noindex,nofollow">
-<meta name="referrer" content="no-referrer">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Calculadora de cuota de autónomos 2026 por tramos de rendimientos · Neto y Bruto</title>
 <meta name="description" content="Calcula tu cuota de autónomos de 2026 según tus rendimientos netos, con la tabla de tramos y el tipo del 31,50 % de la Orden de cotización.">
+
 <meta property="og:title" content="Calculadora de cuota de autónomos 2026 por tramos de rendimientos">
 <meta property="og:description" content="Calcula tu cuota de autónomos de 2026 según tus rendimientos netos, con la tabla de tramos y el tipo del 31,50 % de la Orden de cotización.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
@@ -32,8 +34,12 @@
     <div id="o-notes"></div>
     <div class="table-scroll"><table class="ledger" id="t1"></table></div>
     <div class="table-scroll"><table class="ledger" id="t2"></table></div>
+    <div class="actions"><button type="button" class="print-btn">Descargar o imprimir el resultado (PDF)</button><p class="hint">Se genera en tu navegador con «Guardar como PDF». No se envía nada.</p></div>
+    <aside class="offer" data-oferta="contabilidad"><div><p class="offer-t">Contabilidad para autónomos y pymes · próximamente</p><p>Enginai prepara un programa de contabilidad. Si quieres que te avisemos cuando esté, escríbenos.</p></div><a href="https://enginaiglobalsolutions.com/contacto.html?utm_source=netoybruto&utm_medium=calculadora&utm_campaign=contabilidad" rel="noopener">Quiero que me aviséis →</a></aside><aside class="offer" data-oferta="factura"><div><p class="offer-t">Factura con Enginai Factura</p><p>Facturas completas, simplificadas y rectificativas con IVA, recargo de equivalencia e IRPF, registro VERI*FACTU y QR tributario. Plan Autónomo: 9 € al mes, IVA no incluido (según enginaifacturas.cloud).</p></div><a href="https://enginaifacturas.cloud/?utm_source=netoybruto&utm_medium=calculadora&utm_campaign=factura" rel="noopener">Ver Enginai Factura →</a></aside>
+    <!-- FORMULARIO DESACTIVADO: no recoge datos. Pendiente de que Manuel decida proveedor y almacenamiento. --><form class="lead" data-form="email" data-estado="desactivado" hidden aria-hidden="true" onsubmit="return false"><p class="offer-t">Recibir el resultado por email</p><p>Te enviamos este cálculo a tu correo. No lo usaremos para nada más salvo que marques la casilla opcional.</p><label class="label" for="lead-email-email">Email</label><input id="lead-email-email" type="email" name="email" autocomplete="email" disabled><label class="check"><input type="checkbox" name="rgpd" required disabled> He leído la <a href="../privacidad/">política de privacidad</a> y acepto que se usen mis datos para enviarte este resultado.</label><label class="check"><input type="checkbox" name="comercial" disabled> Quiero recibir novedades de Enginai (opcional).</label><p class="rgpd">Responsable: Damián Callejón Nogales (Enginai Global Solutions). Finalidad: enviarte este resultado. Base legal: tu consentimiento. Destinatarios: [proveedor de envío pendiente de decidir]. Conservación: hasta que retires el consentimiento. Derechos: acceso, rectificación, supresión y demás en contacto@enginaiglobalsolutions.com.</p><button type="submit" disabled>Enviarme el resultado</button></form><!-- FORMULARIO DESACTIVADO: no recoge datos. Pendiente de que Manuel decida proveedor y almacenamiento. --><form class="lead" data-form="espera" data-estado="desactivado" hidden aria-hidden="true" onsubmit="return false"><p class="offer-t">Lista de espera: contabilidad de Enginai</p><p>Te avisamos por email cuando el programa de contabilidad esté disponible.</p><label class="label" for="lead-espera-email">Email</label><input id="lead-espera-email" type="email" name="email" autocomplete="email" disabled><label class="check"><input type="checkbox" name="rgpd" required disabled> He leído la <a href="../privacidad/">política de privacidad</a> y acepto que se usen mis datos para avisarte del lanzamiento.</label><p class="rgpd">Responsable: Damián Callejón Nogales (Enginai Global Solutions). Finalidad: avisarte del lanzamiento. Base legal: tu consentimiento. Destinatarios: [proveedor de envío pendiente de decidir]. Conservación: hasta que retires el consentimiento. Derechos: acceso, rectificación, supresión y demás en contacto@enginaiglobalsolutions.com.</p><button type="submit" disabled>Apuntarme</button></form>
   </div>
 </section>
+<div class="ad-slot" data-slot="cuota-autonomos-tras-resultado" hidden aria-hidden="true"></div>
 <section class="doc">
   <div class="cols">
     <div><h2>Cómo se calcula</h2><ul><li>Rendimiento computable = rendimiento neto − 7 % de gastos genéricos (3 % si eres societario), ÷ 12.</li><li>Tramo y bases mínima y máxima: art. 18 de la Orden PJC/297/2026.</li><li>Tipo 31,50 %: contingencias comunes 28,30 %, profesionales 1,30 %, cese de actividad 0,90 %, formación 0,10 % y MEI 0,90 %.</li></ul></div>
@@ -43,23 +49,24 @@
     <div><h2>Comprobación</h2><p>Las cuotas mínimas por tramo salen de multiplicar la base de la Orden por el 31,50 % (p. ej., tramo reducido 1: 653,59 € × 31,50 % = 205,88 €). Ver el <a href=../VALIDACION.md>registro de validación</a>.</p></div>
     <div><h2>Fuentes oficiales</h2><ul class="src"><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-7296" rel="noopener">Orden PJC/297/2026, de cotización 2026 (BOE)</a></li><li><a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10724/1320/1322" rel="noopener">Seguridad Social · RETA: ¿cuánto se debe cotizar?</a></li></ul></div>
   </div>
-  <div class="cta"><p>¿Llevas las nóminas o la facturación de tu empresa? En Enginai desarrollamos software y webs a medida para pymes.</p><a href="https://enginaiglobalsolutions.com" rel="noopener">Conocer Enginai →</a></div>
+  <div class="ad-slot" data-slot="cuota-autonomos-pie" hidden aria-hidden="true"></div>
 </section>
 </main>
 <footer><div class="wrap">
   <div class="cols">
     <div>
-      <h2>Aviso legal</h2>
-      <p>Herramientas informativas en versión de pruebas. Los resultados son estimaciones orientativas con la normativa general de 2026 y no constituyen asesoramiento laboral, fiscal ni jurídico. No sustituyen a tu nómina, a tu asesoría ni a los servicios oficiales (AEAT, Seguridad Social, SEPE, juzgados). No nos hacemos responsables de las decisiones tomadas a partir de estos cálculos. Cifras revisadas el 23 de noviembre de 2026.</p>
+      <h2>Aviso</h2>
+      <p>Resultados orientativos con la normativa general de 2026: no son asesoramiento laboral, fiscal ni jurídico y no sustituyen a tu nómina, a tu asesoría ni a los servicios oficiales (AEAT, Seguridad Social, SEPE, juzgados). Cifras revisadas el 23 de noviembre de 2026.</p>
       <h2 class="mt">Privacidad</h2>
       <p>Sin cookies, analítica ni rastreadores. Los cálculos se hacen en tu navegador y lo que escribes no se envía a ningún servidor.</p>
+      <p class="mt"><a href="../aviso-legal/">Aviso legal</a> · <a href="../privacidad/">Privacidad y cookies</a></p>
     </div>
     <div>
       <h2>Calculadoras</h2>
       <ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul>
     </div>
   </div>
-  <p class="credit">Diseño y desarrollo: <a href="https://enginaiglobalsolutions.com" rel="noopener">Enginai Global Solutions</a></p>
+  <p class="credit">Titular: Damián Callejón Nogales (Enginai Global Solutions) · Diseño y desarrollo: <a href="https://enginaiglobalsolutions.com/" rel="noopener">Enginai Global Solutions</a></p>
 </div></footer>
 <script src="../assets/ui.js"></script><script src="../assets/calc-extra.js"></script><script src="../assets/p-cuota-autonomos.js"></script>
 </body>

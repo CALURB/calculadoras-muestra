@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="googlebot" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Neto y Bruto 2026 · Calculadora de sueldo neto y coste de empresa (versión de pruebas)</title>
+<meta name="description" content="Calcula tu sueldo neto 2026 desde el bruto anual y el coste total para la empresa, con las cifras oficiales de la Seguridad Social y el algoritmo de retenciones de la AEAT.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="test-banner"><div class="wrap">Versión de pruebas · no indexada · los resultados son orientativos</div></div>
+<header class="top"><div class="wrap">
+  <div>
+    <p class="brand">Neto <span>y</span> Bruto</p>
+    <p class="lede">Del sueldo bruto anual al neto de cada mes, y lo que de verdad cuesta un contrato a la empresa. Con las cifras oficiales de 2026 y el algoritmo de retenciones de la Agencia Tributaria.</p>
+  </div>
+  <div class="year" aria-hidden="true">2026</div>
+</div></header>
+
+<main id="main" class="wrap">
+<nav class="tabs" role="tablist" aria-label="Calculadoras">
+  <button role="tab" id="tab-neto" aria-controls="p-neto" aria-selected="true">Sueldo neto</button>
+  <button role="tab" id="tab-coste" aria-controls="p-coste" aria-selected="false" tabindex="-1">Coste empresa</button>
+</nav>
+
+<!-- (a) SUELDO NETO -->
+<section class="panel" id="p-neto" role="tabpanel" aria-labelledby="tab-neto">
+  <form class="inputs" id="f-neto" novalidate>
+    <fieldset>
+      <label class="label" for="n-bruto">Sueldo bruto anual (€)</label>
+      <input id="n-bruto" type="number" inputmode="decimal" min="0" step="100" value="24000">
+    </fieldset>
+    <fieldset>
+      <legend>Número de pagas</legend>
+      <div class="seg"><label><input type="radio" name="n-pagas" value="12">12</label><label><input type="radio" name="n-pagas" value="14" checked>14</label></div>
+    </fieldset>
+    <div class="row2">
+      <fieldset>
+        <label class="label" for="n-contrato">Contrato</label>
+        <select id="n-contrato"><option value="indefinido">Indefinido</option><option value="temporal">Temporal</option></select>
+      </fieldset>
+      <fieldset>
+        <label class="label" for="n-grupo">Grupo de cotización</label>
+        <select id="n-grupo">
+          <option value="1">1 · Ingenieros y licenciados</option><option value="2">2 · Ingenieros técnicos</option>
+          <option value="3">3 · Jefes administrativos y de taller</option><option value="4-7" selected>4 a 7 · Ayudantes, oficiales, subalternos, auxiliares</option>
+          <option value="8-11">8 a 11 · Oficiales y peones (base diaria)</option>
+        </select>
+      </fieldset>
+    </div>
+    <label class="check" id="n-inf-wrap" hidden><input type="checkbox" id="n-inf"> El contrato dura menos de un año (retención mínima del 2 %)</label>
+    <fieldset style="margin-top:14px">
+      <label class="label" for="n-sit">Situación familiar (modelo 145)</label>
+      <select id="n-sit">
+        <option value="3" selected>Otras situaciones (soltero/a, o casado/a con cónyuge con rentas &gt; 1.500 €)</option>
+        <option value="2">Casado/a, cónyuge con rentas ≤ 1.500 € al año</option>
+        <option value="1">Monoparental: soltero/a, viudo/a, divorciado/a o separado/a con hijos a cargo en exclusiva</option>
+      </select>
+    </fieldset>
+    <div class="row2">
+      <fieldset>
+        <label class="label" for="n-hijos">Hijos menores de 25</label>
+        <input id="n-hijos" type="number" min="0" max="16" step="1" value="0">
+      </fieldset>
+      <fieldset>
+        <label class="label" for="n-hijos3">De ellos, menores de 3</label>
+        <input id="n-hijos3" type="number" min="0" max="16" step="1" value="0">
+      </fieldset>
+    </div>
+    <label class="check"><input type="checkbox" id="n-comp"> Los hijos conviven también con el otro progenitor (mínimo al 50 %)</label>
+    <fieldset style="margin-top:14px">
+      <label class="label" for="n-nac">Año de nacimiento</label>
+      <input id="n-nac" type="number" min="1920" max="2010" step="1" value="1990">
+      <p class="hint">Desde los 65 años el mínimo personal sube (art. 57 LIRPF).</p>
+    </fieldset>
+  </form>
+  <div class="out" aria-live="polite">
+    <div class="big"><span class="num" id="o-neto-mes">—</span><span class="unit" id="o-neto-mes-l">netos al mes</span></div>
+    <div class="sub" id="o-neto-sub"></div>
+    <div id="o-neto-notes"></div>
+    <div class="table-scroll"><table class="ledger" id="t-neto"></table></div>
+    <div class="table-scroll"><table class="ledger" id="t-irpf"></table></div>
+  </div>
+</section>
+
+<!-- (b) COSTE EMPRESA -->
+<section class="panel" id="p-coste" role="tabpanel" aria-labelledby="tab-coste" hidden>
+  <form class="inputs" id="f-coste" novalidate>
+    <fieldset>
+      <label class="label" for="c-bruto">Sueldo bruto anual (€)</label>
+      <input id="c-bruto" type="number" inputmode="decimal" min="0" step="100" value="24000">
+    </fieldset>
+    <div class="row2">
+      <fieldset>
+        <label class="label" for="c-contrato">Contrato</label>
+        <select id="c-contrato"><option value="indefinido">Indefinido</option><option value="temporal">Temporal (duración determinada)</option></select>
+      </fieldset>
+      <fieldset>
+        <label class="label" for="c-grupo">Grupo de cotización</label>
+        <select id="c-grupo">
+          <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+          <option value="4-7" selected>4 a 7</option><option value="8-11">8 a 11</option>
+        </select>
+      </fieldset>
+    </div>
+    <fieldset>
+      <label class="label" for="c-at">Accidentes de trabajo y enfermedad profesional (AT/EP)</label>
+      <select id="c-at">
+        <option value="1.50" selected>Trabajo exclusivo de oficina · 1,50 %</option>
+        <option value="2.00">Representantes de comercio · 2,00 %</option>
+        <option value="3.60">Limpieza · 3,60 %</option>
+        <option value="3.60">Vigilancia y seguridad · 3,60 %</option>
+        <option value="6.70">Oficios en obras y construcción · 6,70 %</option>
+        <option value="custom">Otro tipo (lo indico yo)</option>
+      </select>
+      <p class="hint">Fuente: tarifa de primas, cuadro II (D.A. 61ª LGSS, RDL 3/2026). El tipo real depende del CNAE de la empresa (cuadro I).</p>
+    </fieldset>
+    <fieldset id="c-at-custom-wrap" hidden>
+      <label class="label" for="c-at-custom">Tipo AT/EP (%)</label>
+      <input id="c-at-custom" type="number" min="0" max="10" step="0.05" value="1.50">
+    </fieldset>
+  </form>
+  <div class="out" aria-live="polite">
+    <div class="big"><span class="num" id="o-coste-anual">—</span><span class="unit">coste total al año</span></div>
+    <div class="sub" id="o-coste-sub"></div>
+    <div id="o-coste-notes"></div>
+    <div class="table-scroll"><table class="ledger" id="t-coste"></table></div>
+  </div>
+</section>
+
+<section class="doc" id="validacion">
+  <h2>Comprobado contra la Agencia Tributaria</h2>
+  <p>La retención de IRPF sigue paso a paso el <a href="https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/Algoritmo%20Retenciones-2026_10sept.pdf" rel="noopener">algoritmo oficial de retenciones 2026 (versión del 10 de septiembre)</a>. Para comprobarlo enviamos siete casos al servicio oficial de cálculo de retenciones de la AEAT (el mismo motor que usa su <a href="https://sede.agenciatributaria.gob.es/Sede/Retenciones.shtml" rel="noopener">programa de ayuda</a>) el 23 de noviembre de 2026. En los siete el tipo y el importe coinciden al céntimo.</p>
+  <div class="table-scroll"><table class="ledger" id="t-val"></table></div>
+  <p class="hint">Las cuotas a la Seguridad Social del trabajador son las que entran en el cálculo como «cotizaciones». El código «sello» lo devuelve la AEAT con cada cálculo.</p>
+</section>
+
+<section class="doc" id="metodo">
+  <h2>Cómo se calcula y qué no cubre</h2>
+  <div class="cols">
+    <div>
+      <h3>Seguridad Social (Régimen General, 2026)</h3>
+      <ul>
+        <li>Base mensual = bruto anual ÷ 12 (las pagas extra se prorratean), con el mínimo de tu grupo y el máximo de 5.101,20 €.</li>
+        <li>Trabajador: contingencias comunes 4,70 %, desempleo 1,55 % (indefinido) o 1,60 % (temporal), formación profesional 0,10 %, MEI 0,15 %.</li>
+        <li>Empresa: contingencias comunes 23,60 %, desempleo 5,50 % o 6,70 %, FOGASA 0,20 %, formación profesional 0,60 %, MEI 0,75 % y AT/EP según actividad.</li>
+        <li>Por encima de 5.101,20 € al mes se aplica la cotización adicional de solidaridad: 1,15 %, 1,25 % y 1,46 % por tramos.</li>
+      </ul>
+      <h3>IRPF</h3>
+      <ul>
+        <li>Algoritmo oficial de la AEAT: gastos deducibles (cotizaciones + 2.000 €), reducción por rendimientos del trabajo, mínimo personal y por descendientes, escala de retención del art. 101 LIRPF (única para toda España, salvo territorios forales), límite del 43 % y límites exentos.</li>
+        <li>Resultado: tipo de retención truncado a dos decimales e importe anual redondeado al céntimo.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>No incluido en esta versión</h3>
+      <ul>
+        <li>País Vasco y Navarra (tienen su propio IRPF foral), Ceuta, Melilla y La Palma.</li>
+        <li>Discapacidad, ascendientes a cargo, movilidad geográfica, pensión compensatoria, anualidades por alimentos y deducción por préstamo de vivienda anterior a 2013.</li>
+        <li>Jornada parcial, bonificaciones o reducciones de cuotas, contratos de formación, contratos de 30 días o menos (tienen cotización adicional), horas extra, retribución en especie, incapacidad temporal y regularizaciones a mitad de año.</li>
+        <li>Los convenios colectivos y las particularidades de cada empresa.</li>
+      </ul>
+      <h3>Por qué el neto puede variar</h3>
+      <p>La retención es un adelanto del IRPF y no el impuesto final: la declaración de la renta puede salir a pagar o a devolver.</p>
+    </div>
+  </div>
+  <div class="cta">
+    <p>¿Llevas las nóminas o la facturación de tu empresa? En Enginai desarrollamos software y webs a medida para pymes.</p>
+    <a href="https://enginaiglobalsolutions.com" rel="noopener">Conocer Enginai →</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h2>Aviso legal</h2>
+      <p>Herramienta informativa en versión de pruebas. Los resultados son estimaciones orientativas calculadas con la normativa general de 2026 y no constituyen asesoramiento laboral, fiscal ni jurídico. No sustituyen a tu nómina, a tu asesoría ni a los servicios oficiales de la Agencia Tributaria y de la Seguridad Social. No nos hacemos responsables de las decisiones tomadas a partir de estos cálculos. Cifras revisadas el 23 de noviembre de 2026.</p>
+      <h2 style="margin-top:16px">Privacidad</h2>
+      <p>Esta página no usa cookies, analítica ni rastreadores. Todos los cálculos se hacen en tu navegador y los datos que escribes no se envían a ningún servidor.</p>
+    </div>
+    <div>
+      <h2>Fuentes oficiales</h2>
+      <ul style="padding-left:18px;margin:0">
+        <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-7296" rel="noopener">Orden PJC/297/2026, de cotización 2026 (BOE)</a></li>
+        <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" rel="noopener">Real Decreto 126/2026, SMI 2026 (BOE)</a></li>
+        <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548" rel="noopener">RDL 3/2026, tarifa AT/EP (BOE)</a></li>
+        <li><a href="https://sede.agenciatributaria.gob.es/Sede/Retenciones.shtml" rel="noopener">AEAT · Retenciones 2026</a></li>
+        <li><a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10957/9932/4327" rel="noopener">Seguridad Social · Bases y tipos</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="credit">Diseño y desarrollo: <a href="https://enginaiglobalsolutions.com" rel="noopener">Enginai Global Solutions</a></p>
+</div></footer>
+<script src="calc.js"></script>
+<script src="validacion-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

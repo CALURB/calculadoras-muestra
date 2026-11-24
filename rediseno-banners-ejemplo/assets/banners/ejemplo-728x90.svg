@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="728" height="90" viewBox="0 0 728 90">
-<defs><pattern id="p" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="16" height="16" fill="#fff4b8"/><rect width="8" height="16" fill="#ffe466"/></pattern></defs>
-<rect width="728" height="90" fill="url(#p)"/><rect x="1.5" y="1.5" width="725" height="87" fill="none" stroke="#0b0e11" stroke-width="3" stroke-dasharray="10 6"/>
-<g font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-weight="800" fill="#0b0e11" text-anchor="middle"><text x="364.0" y="39.0" font-size="22">EJEMPLO DE BANNER</text><text x="364.0" y="63.0" font-size="14" font-weight="500">728×90 · leaderboard · no es un anuncio real</text></g></svg>

@@ -15,7 +15,7 @@
     return h;
   }
   function notes(list){ return list.filter(Boolean).map(function(n){ var ok=n.charAt(0)==="+"; return "<p class=\"note"+(ok?" ok":"")+"\">"+esc(ok?n.slice(1):n)+"</p>"; }).join(""); }
-  function bind(formId, fn){ var f=$(formId); if(!f) return; f.addEventListener("input",fn); f.addEventListener("change",fn); f.addEventListener("submit",function(e){e.preventDefault();}); fn(); }
+  function bind(formId, fn){ var f=$(formId); if(!f) return; f.addEventListener("input",fn); f.addEventListener("change",fn); f.addEventListener("submit",function(e){e.preventDefault();}); fn(); var o=$("out"); if(o) o.classList.add("ready"); }
   function radio(name){ var el=document.querySelector("input[name='"+name+"']:checked"); return el?el.value:null; }
   // Menú móvil
   document.addEventListener("DOMContentLoaded",function(){

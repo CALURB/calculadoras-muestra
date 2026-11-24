@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Coste de un trabajador para la empresa en 2026 · Neto y Bruto</title>
+<meta name="description" content="Calcula cuánto cuesta un contrato a la empresa en 2026: contingencias comunes, desempleo, FOGASA, formación, MEI, AT/EP y solidaridad.">
+
+<link rel="canonical" href="https://netoybruto.enginaiglobalsolutions.com/coste-empresa/">
+<meta property="og:title" content="Coste de un trabajador para la empresa en 2026">
+<meta property="og:description" content="Calcula cuánto cuesta un contrato a la empresa en 2026: contingencias comunes, desempleo, FOGASA, formación, MEI, AT/EP y solidaridad.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#0b0e11">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="test-banner"><div class="wrap">Versión de pruebas · no indexada · resultados orientativos · banners de EJEMPLO</div></div>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="../"><span class="mark" aria-hidden="true"></span>Neto <span>y</span> Bruto</a>
+  <span class="year" aria-hidden="true">Cifras <b>2026</b></span>
+  <button class="menu-btn" aria-expanded="false" aria-controls="toolnav">Calculadoras</button>
+</div>
+<nav class="toolnav" id="toolnav" aria-label="Calculadoras"><div class="wrap"><ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/" aria-current="page">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul></div></nav>
+</header>
+<aside class="ad ad--leaderboard ad--cabecera" data-banner="ejemplo-cabecera" aria-label="Ejemplo · cabecera 728×90 / móvil 320×100"><span class="ad-lab">Ejemplo · cabecera 728×90 / móvil 320×100</span><div class="ad-box"><a class="ad-img" href="#ejemplo" rel="noopener"><picture><source media="(max-width: 759px)" srcset="../assets/banners/ejemplo-320x100.svg" width="320" height="100"><img src="../assets/banners/ejemplo-728x90.svg" width="728" height="90" alt="Banner de ejemplo: no es un anuncio real" decoding="async"></picture></a></div></aside>
+<main id="main" class="wrap">
+<section class="hero"><p class="kicker"><span>Calculadora 02/10</span><span>Empresa</span></p><h1>Coste de un trabajador para la empresa en 2026</h1><p class="lede">Lo que cuesta de verdad un contrato: sueldo bruto más las cotizaciones de la empresa en 2026.</p></section>
+<section class="panel">
+  <form class="inputs" id="f" novalidate><fieldset><label class="label" for="c-bruto" id="c-bruto-l">Sueldo bruto anual (€)</label><input id="c-bruto" type="number" inputmode="decimal" min="0" step="100" value="24000"></fieldset><div class="row2"><fieldset><label class="label" for="c-contrato" id="c-contrato-l">Contrato</label><select id="c-contrato"><option value="indefinido">Indefinido</option><option value="temporal">Temporal (duración determinada)</option></select></fieldset><fieldset><label class="label" for="c-grupo" id="c-grupo-l">Grupo de cotización</label><select id="c-grupo"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4-7" selected>4 a 7</option><option value="8-11">8 a 11</option></select></fieldset></div><fieldset><label class="label" for="c-at" id="c-at-l">AT/EP (accidentes de trabajo y enfermedad profesional)</label><select id="c-at"><option value="1.50" selected>Trabajo exclusivo de oficina · 1,50 %</option><option value="2.00">Representantes de comercio · 2,00 %</option><option value="3.60">Limpieza · 3,60 %</option><option value="3.60">Vigilancia y seguridad · 3,60 %</option><option value="6.70">Oficios en obras y construcción · 6,70 %</option><option value="custom">Otro tipo (lo indico yo)</option></select><p class=hint>Cuadro II de la tarifa de primas (RDL 3/2026). El tipo real depende del CNAE de la empresa (cuadro I).</p></fieldset><fieldset id="c-at-custom-wrap" hidden><label class="label" for="c-at-custom">Tipo AT/EP (%)</label><input id="c-at-custom" type="number" inputmode="decimal" min="0" max=10 step="0.05" value="1.50"></fieldset></form>
+  <div class="out" aria-live="polite" id="out">
+    <div class="big"><span class="num" id="o-big">—</span><span class="unit" id="o-big-l">coste total al año</span></div>
+    <div class="sub" id="o-sub"></div>
+    <div class="split" id="o-split" hidden></div>
+    <div id="o-notes"></div>
+    <div class="table-scroll"><table class="ledger" id="t1"></table></div>
+    <div class="table-scroll"><table class="ledger" id="t2"></table></div>
+    <div class="actions"><button type="button" class="print-btn">Descargar o imprimir el resultado (PDF)</button><p class="hint">Se genera en tu navegador con «Guardar como PDF». No se envía nada.</p></div>
+    <form class="lead" data-form="email" data-estado="estatico" novalidate><div class="hp" aria-hidden="true"><label>Deja este campo vacío <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div><p class="offer-t">Recibir el resultado por email</p><p>Te enviamos este cálculo desde contacto@enginaiglobalsolutions.com. Si no marcas la casilla opcional, no guardamos tu dirección en ninguna lista.</p><p class="note">Disponible en la versión publicada en netoybruto.enginaiglobalsolutions.com (esta vista de pruebas en GitHub Pages es estática y no envía ni guarda datos).</p><label class="label" for="lead-email-email">Tu email</label><input id="lead-email-email" type="email" name="email" autocomplete="email" placeholder="nombre@ejemplo.com" disabled required><label class="check"><input type="checkbox" name="rgpd" required disabled> <span>He leído la <a href="../privacidad/">política de privacidad</a> y doy mi consentimiento para enviarte este resultado.</span></label><label class="check"><input type="checkbox" name="comercial" disabled> Quiero recibir novedades de Enginai (opcional; podrás darte de baja en un clic).</label><p class="rgpd">Responsable: Damián Callejón Nogales (Enginai Global Solutions, NIF 09077638K). Finalidad: enviarte este resultado. Base legal: tu consentimiento expreso (art. 6.1.a RGPD). Destinatarios: ninguno (envío propio desde nuestro servidor, sin terceros). Conservación: el envío del resultado (tu correo no se guarda salvo que marques novedades; si las marcas, hasta que te des de baja). Derechos y baja: acceso, rectificación, supresión, retirada del consentimiento y enlace de baja en cada aviso, o escribiendo a contacto@enginaiglobalsolutions.com.</p><div class="lead-foot"><button type="submit" disabled>Enviarme el resultado</button><p class="lead-status" aria-live="polite"></p></div></form>
+    <!-- HUECO DE AFILIACIÓN OCULTO: pendiente de completar alta con gestoritas y poner el enlace real. --><aside class="partner" data-afiliado="gestoritas" hidden aria-hidden="true"><span class="badge-pat">Enlace patrocinado · afiliación</span><div><p class="offer-t">Gestoría online Gestoritas para autónomos</p><p>Asesoría fiscal, contable y laboral online para autónomos y pymes en España.</p></div><a href="#afiliado-gestoritas-pendiente" rel="sponsored noopener">Ver planes de Gestoritas →</a></aside>
+  </div>
+</section>
+<aside class="ad ad--leaderboard ad--tras-resultado" data-banner="enginai-nominas" aria-label="Enginai"><span class="ad-lab">Enginai</span><div class="ad-box"><a class="ad-propio" href="https://enginaiglobalsolutions.com/contacto.html?utm_source=netoybruto&amp;utm_medium=calculadora&amp;utm_campaign=nominas" rel="noopener"><span class="ad-t">Haz tus nóminas con Enginai</span><span class="ad-d">Software para pymes que calculan nóminas a mano o con hojas de cálculo. Cuéntanos cuántas haces al mes.</span><span class="ad-cta">Pedir información <span aria-hidden="true">→</span></span></a></div></aside>
+<section class="doc has-aside"><div class="doc-main"><div class="cols">
+    <div><h2>Cómo se calcula</h2><ul><li>Empresa: contingencias comunes 23,60 %, desempleo 5,50 % (indefinido) o 6,70 % (temporal), FOGASA 0,20 %, formación 0,60 %, MEI 0,75 % y AT/EP según ocupación.</li><li>Por encima de 5.101,20 € al mes: cotización adicional de solidaridad (0,96 %, 1,04 % y 1,22 % a cargo de la empresa por tramos).</li></ul></div>
+    <div><h2>Qué no cubre</h2><ul><li>Tipos AT/EP del cuadro I por actividad (CNAE): solo cinco ocupaciones del cuadro II o un tipo a mano.</li><li>Bonificaciones, reducciones, jornada parcial, contratos de 30 días o menos (cotización adicional) y convenios.</li></ul></div>
+  </div>
+  <div class="cols">
+    <div><h2>Comprobación</h2><p>Comprobación aritmética con los tipos de la Orden: 24.000 € (oficina, indefinido) → base 2.000 €/mes, cotización empresa 32,15 % = 7.716 €/año. Ver el <a href=../VALIDACION.md>registro de validación</a>.</p></div>
+    <div><h2>Fuentes oficiales</h2><ul class="src"><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-7296" rel="noopener">Orden PJC/297/2026, de cotización 2026 (BOE)</a></li><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-2548" rel="noopener">RDL 3/2026, tarifa AT/EP (BOE)</a></li><li><a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10957/9932/4327" rel="noopener">Seguridad Social · Bases y tipos 2026</a></li><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" rel="noopener">Real Decreto 126/2026, SMI 2026 (BOE)</a></li></ul></div>
+  </div></div><aside class="ad ad--rectangulo ad--lateral ad--solo-escritorio" data-banner="ejemplo-lateral" aria-label="Ejemplo · lateral 300×250 (solo escritorio)"><span class="ad-lab">Ejemplo · lateral 300×250 (solo escritorio)</span><div class="ad-box"><a class="ad-img" href="#ejemplo" rel="noopener"><picture><img src="../assets/banners/ejemplo-300x250.svg" width="300" height="250" alt="Banner de ejemplo: no es un anuncio real" loading="lazy" decoding="async"></picture></a></div></aside></section>
+<aside class="ad ad--leaderboard ad--antes-pie" data-banner="ejemplo-antes-pie" aria-label="Ejemplo · antes del pie 728×90 / 320×100"><span class="ad-lab">Ejemplo · antes del pie 728×90 / 320×100</span><div class="ad-box"><a class="ad-img" href="#ejemplo" rel="noopener"><picture><source media="(max-width: 759px)" srcset="../assets/banners/ejemplo-320x100.svg" width="320" height="100"><img src="../assets/banners/ejemplo-728x90.svg" width="728" height="90" alt="Banner de ejemplo: no es un anuncio real" loading="lazy" decoding="async"></picture></a></div></aside>
+</main>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div class="fcol-main">
+      <p class="fbrand"><span class="mark" aria-hidden="true"></span>Neto y Bruto</p>
+      <h2>Aviso</h2>
+      <p>Resultados orientativos con la normativa general de 2026: no son asesoramiento laboral, fiscal ni jurídico y no sustituyen a tu nómina, a tu asesoría ni a los servicios oficiales (AEAT, Seguridad Social, SEPE, juzgados). Cifras revisadas el 23 de noviembre de 2026.</p>
+      <h2 class="mt">Privacidad</h2>
+      <p>Sin cookies, analítica ni rastreadores. Los cálculos se hacen en tu navegador y lo que escribes no se envía a ningún servidor.</p>
+    </div>
+    <div>
+      <h2>Calculadoras</h2>
+      <ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <ul class="flegal"><li><a href="../aviso-legal/">Aviso legal</a></li><li><a href="../privacidad/">Privacidad</a></li><li><a href="../cookies/">Cookies</a></li></ul>
+    </div>
+  </div>
+  <p class="credit"><span>Titular: Damián Callejón Nogales (Enginai Global Solutions)</span><span>Diseño y desarrollo: <a href="https://enginaiglobalsolutions.com" rel="noopener">Enginai Global Solutions</a></span></p>
+</div></footer>
+<script src="../assets/ui.js"></script><script src="../assets/calc.js"></script><script src="../assets/p-coste-empresa.js"></script>
+</body>
+</html>

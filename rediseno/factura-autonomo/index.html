@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Calculadora de factura de autónomo con IVA y retención de IRPF · Neto y Bruto</title>
+<meta name="description" content="Calcula el total de una factura de autónomo con IVA y retención de IRPF del 15 o del 7 %, o la base que necesitas para cobrar un líquido.">
+
+<link rel="canonical" href="https://netoybruto.enginaiglobalsolutions.com/factura-autonomo/">
+<meta property="og:title" content="Calculadora de factura de autónomo con IVA y retención de IRPF">
+<meta property="og:description" content="Calcula el total de una factura de autónomo con IVA y retención de IRPF del 15 o del 7 %, o la base que necesitas para cobrar un líquido.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#0b0e11">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="test-banner"><div class="wrap">Versión de pruebas · no indexada · resultados orientativos</div></div>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="../"><span class="mark" aria-hidden="true"></span>Neto <span>y</span> Bruto</a>
+  <span class="year" aria-hidden="true">Cifras <b>2026</b></span>
+  <button class="menu-btn" aria-expanded="false" aria-controls="toolnav">Calculadoras</button>
+</div>
+<nav class="toolnav" id="toolnav" aria-label="Calculadoras"><div class="wrap"><ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/" aria-current="page">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul></div></nav>
+</header>
+
+<main id="main" class="wrap">
+<section class="hero"><p class="kicker"><span>Calculadora 05/10</span><span>Autónomos</span></p><h1>Calculadora de factura de autónomo con IVA y retención de IRPF</h1><p class="lede">Cuánto cobrar en una factura con IVA y retención de IRPF, o qué base necesitas para recibir un importe concreto.</p></section>
+<section class="panel">
+  <form class="inputs" id="f" novalidate><fieldset><legend>Parto de</legend><div class="seg"><label><input type="radio" name="modo" value="base" checked>Sé la base</label><label><input type="radio" name="modo" value="total">Sé lo que quiero cobrar</label></div></fieldset><fieldset><label class="label" for="imp" id="imp-l">Base imponible (€)</label><input id="imp" type="number" inputmode="decimal" min="0" step="0.01" value="1000"></fieldset><div class="row2"><fieldset><label class="label" for="iva" id="iva-l">IVA</label><select id="iva"><option value="21" selected>21 %</option><option value="10">10 %</option><option value="4">4 %</option><option value="0">0 % / exento</option></select></fieldset><fieldset><label class="label" for="ret" id="ret-l">Retención IRPF</label><select id="ret"><option value="15" selected>15 % (general)</option><option value="7">7 % (inicio de actividad)</option><option value="0">Sin retención</option></select></fieldset></div><label class="check"><input type="checkbox" id="re"> Mi cliente está en recargo de equivalencia</label></form>
+  <div class="out" aria-live="polite" id="out">
+    <div class="big"><span class="num" id="o-big">—</span><span class="unit" id="o-big-l">total a cobrar</span></div>
+    <div class="sub" id="o-sub"></div>
+    <div class="split" id="o-split" hidden></div>
+    <div id="o-notes"></div>
+    <div class="table-scroll"><table class="ledger" id="t1"></table></div>
+    <div class="table-scroll"><table class="ledger" id="t2"></table></div>
+    <div class="actions"><button type="button" class="print-btn">Descargar o imprimir el resultado (PDF)</button><p class="hint">Se genera en tu navegador con «Guardar como PDF». No se envía nada.</p></div>
+    <form class="lead" data-form="email" data-estado="estatico" novalidate><div class="hp" aria-hidden="true"><label>Deja este campo vacío <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div><p class="offer-t">Recibir el resultado por email</p><p>Te enviamos este cálculo desde contacto@enginaiglobalsolutions.com. Si no marcas la casilla opcional, no guardamos tu dirección en ninguna lista.</p><p class="note">Disponible en la versión publicada en netoybruto.enginaiglobalsolutions.com (esta vista de pruebas en GitHub Pages es estática y no envía ni guarda datos).</p><label class="label" for="lead-email-email">Tu email</label><input id="lead-email-email" type="email" name="email" autocomplete="email" placeholder="nombre@ejemplo.com" disabled required><label class="check"><input type="checkbox" name="rgpd" required disabled> <span>He leído la <a href="../privacidad/">política de privacidad</a> y doy mi consentimiento para enviarte este resultado.</span></label><label class="check"><input type="checkbox" name="comercial" disabled> Quiero recibir novedades de Enginai (opcional; podrás darte de baja en un clic).</label><p class="rgpd">Responsable: Damián Callejón Nogales (Enginai Global Solutions, NIF 09077638K). Finalidad: enviarte este resultado. Base legal: tu consentimiento expreso (art. 6.1.a RGPD). Destinatarios: ninguno (envío propio desde nuestro servidor, sin terceros). Conservación: el envío del resultado (tu correo no se guarda salvo que marques novedades; si las marcas, hasta que te des de baja). Derechos y baja: acceso, rectificación, supresión, retirada del consentimiento y enlace de baja en cada aviso, o escribiendo a contacto@enginaiglobalsolutions.com.</p><div class="lead-foot"><button type="submit" disabled>Enviarme el resultado</button><p class="lead-status" aria-live="polite"></p></div></form><form class="lead" data-form="espera" data-estado="estatico" novalidate><div class="hp" aria-hidden="true"><label>Deja este campo vacío <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div><p class="offer-t">Lista de espera: contabilidad de Enginai</p><p>Te avisamos desde contacto@enginaiglobalsolutions.com cuando el programa de contabilidad esté disponible.</p><p class="note">Disponible en la versión publicada en netoybruto.enginaiglobalsolutions.com (esta vista de pruebas en GitHub Pages es estática y no envía ni guarda datos).</p><label class="label" for="lead-espera-email">Tu email</label><input id="lead-espera-email" type="email" name="email" autocomplete="email" placeholder="nombre@ejemplo.com" disabled required><label class="check"><input type="checkbox" name="rgpd" required disabled> <span>He leído la <a href="../privacidad/">política de privacidad</a> y doy mi consentimiento para avisarte del lanzamiento del programa de contabilidad.</span></label><p class="rgpd">Responsable: Damián Callejón Nogales (Enginai Global Solutions, NIF 09077638K). Finalidad: avisarte del lanzamiento del programa de contabilidad. Base legal: tu consentimiento expreso (art. 6.1.a RGPD). Destinatarios: ninguno (envío propio desde nuestro servidor, sin terceros). Conservación: hasta el lanzamiento del programa de contabilidad o hasta que te des de baja. Derechos y baja: acceso, rectificación, supresión, retirada del consentimiento y enlace de baja en cada aviso, o escribiendo a contacto@enginaiglobalsolutions.com.</p><div class="lead-foot"><button type="submit" disabled>Apuntarme a la lista</button><p class="lead-status" aria-live="polite"></p></div></form>
+    <!-- HUECO DE AFILIACIÓN OCULTO: pendiente de completar alta con qonto y poner el enlace real. --><aside class="partner" data-afiliado="qonto" hidden aria-hidden="true"><span class="badge-pat">Enlace patrocinado · afiliación</span><div><p class="offer-t">Cuenta profesional Qonto para autónomos y pymes</p><p>Cuenta con IBAN español, tarjetas y gestión de gastos. Alta online para empresas y autónomos.</p></div><a href="#afiliado-qonto-pendiente" rel="sponsored noopener">Abrir cuenta en Qonto →</a></aside><!-- HUECO DE AFILIACIÓN OCULTO: pendiente de completar alta con gestoritas y poner el enlace real. --><aside class="partner" data-afiliado="gestoritas" hidden aria-hidden="true"><span class="badge-pat">Enlace patrocinado · afiliación</span><div><p class="offer-t">Gestoría online Gestoritas para autónomos</p><p>Asesoría fiscal, contable y laboral online para autónomos y pymes en España.</p></div><a href="#afiliado-gestoritas-pendiente" rel="sponsored noopener">Ver planes de Gestoritas →</a></aside>
+  </div>
+</section>
+<aside class="ad ad--leaderboard ad--tras-resultado" data-banner="enginai-factura" aria-label="Enginai"><span class="ad-lab">Enginai</span><div class="ad-box"><a class="ad-propio" href="https://enginaifacturas.cloud/?utm_source=netoybruto&amp;utm_medium=calculadora&amp;utm_campaign=factura" rel="noopener"><span class="ad-t">Factura con Enginai Factura</span><span class="ad-d">IVA, recargo e IRPF, VERI*FACTU y QR tributario. Plan Autónomo: 9 € al mes, IVA no incluido.</span><span class="ad-cta">Ver Enginai Factura <span aria-hidden="true">→</span></span></a></div></aside>
+<section class="doc"><div class="doc-main"><div class="cols">
+    <div><h2>Cómo se calcula</h2><ul><li>Total = base + IVA (+ recargo de equivalencia) − retención de IRPF.</li><li>Retención del 15 % para actividades profesionales y del 7 % en el año de inicio y los dos siguientes (art. 101.5 LIRPF y art. 95 RIRPF).</li><li>Modo inverso: base = líquido ÷ (1 + IVA + recargo − retención).</li></ul></div>
+    <div><h2>Qué no cubre</h2><ul><li>Si tu actividad lleva retención (no todas: p. ej., muchas actividades empresariales en estimación directa no la llevan).</li><li>Requisitos de VERI*FACTU y formato legal de la factura.</li><li>Canarias, Ceuta y Melilla.</li></ul></div>
+  </div>
+  <div class="cols">
+    <div><h2>Comprobación</h2><p>Casos a mano en el <a href=../VALIDACION.md>registro de validación</a>: base 1.000 € al 21 % y 15 % → total 1.060 €; y a la inversa, 1.060 € → base 1.000 €.</p></div>
+    <div><h2>Fuentes oficiales</h2><ul class="src"><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1992-28740" rel="noopener">Ley 37/1992 del IVA, arts. 90 y 91 (BOE)</a></li><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764" rel="noopener">Ley 35/2006 del IRPF, art. 101 (BOE)</a></li><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-6820" rel="noopener">Reglamento del IRPF, art. 95 (BOE)</a></li></ul></div>
+  </div></div></section>
+<aside class="ad ad--leaderboard ad--antes-pie" data-banner="enginai-contabilidad-pie" aria-label="Enginai · próximamente"><span class="ad-lab">Enginai · próximamente</span><div class="ad-box"><a class="ad-propio" href="https://enginaiglobalsolutions.com/contacto.html?utm_source=netoybruto&amp;utm_medium=calculadora&amp;utm_campaign=contabilidad" rel="noopener"><span class="ad-t">Contabilidad para autónomos y pymes</span><span class="ad-d">Enginai prepara un programa de contabilidad. Si quieres que te avisemos cuando esté, escríbenos.</span><span class="ad-cta">Quiero que me aviséis <span aria-hidden="true">→</span></span></a></div></aside>
+</main>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div class="fcol-main">
+      <p class="fbrand"><span class="mark" aria-hidden="true"></span>Neto y Bruto</p>
+      <h2>Aviso</h2>
+      <p>Resultados orientativos con la normativa general de 2026: no son asesoramiento laboral, fiscal ni jurídico y no sustituyen a tu nómina, a tu asesoría ni a los servicios oficiales (AEAT, Seguridad Social, SEPE, juzgados). Cifras revisadas el 23 de noviembre de 2026.</p>
+      <h2 class="mt">Privacidad</h2>
+      <p>Sin cookies, analítica ni rastreadores. Los cálculos se hacen en tu navegador y lo que escribes no se envía a ningún servidor.</p>
+    </div>
+    <div>
+      <h2>Calculadoras</h2>
+      <ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <ul class="flegal"><li><a href="../aviso-legal/">Aviso legal</a></li><li><a href="../privacidad/">Privacidad</a></li><li><a href="../cookies/">Cookies</a></li></ul>
+    </div>
+  </div>
+  <p class="credit"><span>Titular: Damián Callejón Nogales (Enginai Global Solutions)</span><span>Diseño y desarrollo: <a href="https://enginaiglobalsolutions.com" rel="noopener">Enginai Global Solutions</a></span></p>
+</div></footer>
+<script src="../assets/ui.js"></script><script src="../assets/calc-extra.js"></script><script src="../assets/p-factura-autonomo.js"></script>
+</body>
+</html>

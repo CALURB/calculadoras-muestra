@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Calculadora de indemnización por despido (improcedente, objetivo y fin de contrato) · Neto y Bruto</title>
+<meta name="description" content="Calcula la indemnización por despido improcedente, objetivo o fin de contrato temporal con los criterios de la herramienta del CGPJ.">
+
+<link rel="canonical" href="https://netoybruto.enginaiglobalsolutions.com/despido/">
+<meta property="og:title" content="Calculadora de indemnización por despido (improcedente, objetivo y fin de contrato)">
+<meta property="og:description" content="Calcula la indemnización por despido improcedente, objetivo o fin de contrato temporal con los criterios de la herramienta del CGPJ.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#0b0e11">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="test-banner"><div class="wrap">Versión de pruebas · no indexada · resultados orientativos · banners de EJEMPLO</div></div>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="../"><span class="mark" aria-hidden="true"></span>Neto <span>y</span> Bruto</a>
+  <span class="year" aria-hidden="true">Cifras <b>2026</b></span>
+  <button class="menu-btn" aria-expanded="false" aria-controls="toolnav">Calculadoras</button>
+</div>
+<nav class="toolnav" id="toolnav" aria-label="Calculadoras"><div class="wrap"><ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/" aria-current="page">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul></div></nav>
+</header>
+<aside class="ad ad--leaderboard ad--cabecera" data-banner="ejemplo-cabecera" aria-label="Ejemplo · cabecera 728×90 / móvil 320×100"><span class="ad-lab">Ejemplo · cabecera 728×90 / móvil 320×100</span><div class="ad-box"><a class="ad-img" href="#ejemplo" rel="noopener"><picture><source media="(max-width: 759px)" srcset="../assets/banners/ejemplo-320x100.svg" width="320" height="100"><img src="../assets/banners/ejemplo-728x90.svg" width="728" height="90" alt="Banner de ejemplo: no es un anuncio real" decoding="async"></picture></a></div></aside>
+<main id="main" class="wrap">
+<section class="hero"><p class="kicker"><span>Calculadora 07/10</span><span>Fin de contrato</span></p><h1>Calculadora de indemnización por despido (improcedente, objetivo y fin de contrato)</h1><p class="lede">La indemnización por despido improcedente, objetivo o fin de contrato temporal, con los criterios de la calculadora del Consejo General del Poder Judicial.</p></section>
+<section class="panel">
+  <form class="inputs" id="f" novalidate><fieldset><label class="label" for="bruto" id="bruto-l">Salario bruto anual con pagas extra (€)</label><input id="bruto" type="number" inputmode="decimal" min="0" step="100" value="24000"></fieldset><div class="row2"><fieldset><label class="label" for="alta" id="alta-l">Fecha de alta</label><input id="alta" type="date" value="2018-05-14"></fieldset><fieldset><label class="label" for="baja" id="baja-l">Fecha de despido</label><input id="baja" type="date" value="2026-11-23"></fieldset></div><fieldset><label class="label" for="tipo" id="tipo-l">Tipo de extinción</label><select id="tipo"><option value="improcedente" selected>Despido improcedente (33 días/año; 45 antes del 12/02/2012)</option><option value="objetivo">Despido objetivo o colectivo (20 días/año)</option><option value="temporal">Fin de contrato temporal (12 días/año)</option></select></fieldset></form>
+  <div class="out" aria-live="polite" id="out">
+    <div class="big"><span class="num" id="o-big">—</span><span class="unit" id="o-big-l">de indemnización</span></div>
+    <div class="sub" id="o-sub"></div>
+    <div class="split" id="o-split" hidden></div>
+    <div id="o-notes"></div>
+    <div class="table-scroll"><table class="ledger" id="t1"></table></div>
+    <div class="table-scroll"><table class="ledger" id="t2"></table></div>
+    <div class="actions"><button type="button" class="print-btn">Descargar o imprimir el resultado (PDF)</button><p class="hint">Se genera en tu navegador con «Guardar como PDF». No se envía nada.</p></div>
+    <form class="lead" data-form="email" data-estado="estatico" novalidate><div class="hp" aria-hidden="true"><label>Deja este campo vacío <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div><p class="offer-t">Recibir el resultado por email</p><p>Te enviamos este cálculo desde contacto@enginaiglobalsolutions.com. Si no marcas la casilla opcional, no guardamos tu dirección en ninguna lista.</p><p class="note">Disponible en la versión publicada en netoybruto.enginaiglobalsolutions.com (esta vista de pruebas en GitHub Pages es estática y no envía ni guarda datos).</p><label class="label" for="lead-email-email">Tu email</label><input id="lead-email-email" type="email" name="email" autocomplete="email" placeholder="nombre@ejemplo.com" disabled required><label class="check"><input type="checkbox" name="rgpd" required disabled> <span>He leído la <a href="../privacidad/">política de privacidad</a> y doy mi consentimiento para enviarte este resultado.</span></label><label class="check"><input type="checkbox" name="comercial" disabled> Quiero recibir novedades de Enginai (opcional; podrás darte de baja en un clic).</label><p class="rgpd">Responsable: Damián Callejón Nogales (Enginai Global Solutions, NIF 09077638K). Finalidad: enviarte este resultado. Base legal: tu consentimiento expreso (art. 6.1.a RGPD). Destinatarios: ninguno (envío propio desde nuestro servidor, sin terceros). Conservación: el envío del resultado (tu correo no se guarda salvo que marques novedades; si las marcas, hasta que te des de baja). Derechos y baja: acceso, rectificación, supresión, retirada del consentimiento y enlace de baja en cada aviso, o escribiendo a contacto@enginaiglobalsolutions.com.</p><div class="lead-foot"><button type="submit" disabled>Enviarme el resultado</button><p class="lead-status" aria-live="polite"></p></div></form>
+    
+  </div>
+</section>
+<aside class="ad ad--leaderboard ad--tras-resultado" data-banner="enginai-nominas" aria-label="Enginai"><span class="ad-lab">Enginai</span><div class="ad-box"><a class="ad-propio" href="https://enginaiglobalsolutions.com/contacto.html?utm_source=netoybruto&amp;utm_medium=calculadora&amp;utm_campaign=nominas" rel="noopener"><span class="ad-t">Haz tus nóminas con Enginai</span><span class="ad-d">Software para pymes que calculan nóminas a mano o con hojas de cálculo. Cuéntanos cuántas haces al mes.</span><span class="ad-cta">Pedir información <span aria-hidden="true">→</span></span></a></div></aside>
+<section class="doc has-aside"><div class="doc-main"><div class="cols">
+    <div><h2>Cómo se calcula</h2><ul><li>Salario diario = salario anual ÷ 365 (366 en año bisiesto), criterio del Tribunal Supremo.</li><li>Improcedente: meses × 2,75 días (33/12), tope 720 días; contratos anteriores al 12/02/2012: 3,75 días por mes hasta el 11/02/2012 y 2,75 después, con los topes de la DT 11ª ET (720 días, o lo devengado antes de 2012 hasta 1.260).</li><li>Objetivo: meses × 20/12 días, tope 360. Toda fracción de mes cuenta como mes completo.</li><li>Fin de contrato temporal: días trabajados × 12/365 (de 8 a 11 si el contrato es de 2011 a 2014).</li></ul></div>
+    <div><h2>Qué no cubre</h2><ul><li>Salarios de tramitación, FOGASA, fijos discontinuos, empleo del hogar y relaciones laborales especiales.</li><li>Mejoras de convenio y jornadas reducidas.</li></ul></div>
+  </div>
+  <div class="cols">
+    <div><h2>Comprobación</h2><p>Reproduce los ejemplos de la guía oficial del CGPJ: del 11 al 12/02/2012 son 3,75 + 2,75 = 6,50 días; del 1/1 al 1/4 son 4 meses. Casos en el <a href=../VALIDACION.md>registro de validación</a>.</p></div>
+    <div><h2>Fuentes oficiales</h2><ul class="src"><li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430" rel="noopener">Estatuto de los Trabajadores (BOE)</a></li><li><a href="https://www.poderjudicial.es/cgpj/es/Servicios/Utilidades/Calculo-de-indemnizaciones-por-extincion-de-contrato-de-trabajo/Calculo-de-indemnizaciones-por-extincion-de-contrato-de-trabajo" rel="noopener">CGPJ · Cálculo de indemnizaciones por extinción del contrato</a></li><li><a href="https://www.poderjudicial.es/stfls/CGPJ/UTILIDADES/Guia_pr%C3%A1ctica_legal_y_jurisprudencial_calculo_indemnizaciones_v06_actualizada_a_julio_2026.pdf" rel="noopener">CGPJ · Guía legal de la herramienta (v0.6, julio 2026)</a></li></ul></div>
+  </div></div><aside class="ad ad--rectangulo ad--lateral ad--solo-escritorio" data-banner="ejemplo-lateral" aria-label="Ejemplo · lateral 300×250 (solo escritorio)"><span class="ad-lab">Ejemplo · lateral 300×250 (solo escritorio)</span><div class="ad-box"><a class="ad-img" href="#ejemplo" rel="noopener"><picture><img src="../assets/banners/ejemplo-300x250.svg" width="300" height="250" alt="Banner de ejemplo: no es un anuncio real" loading="lazy" decoding="async"></picture></a></div></aside></section>
+<aside class="ad ad--leaderboard ad--antes-pie" data-banner="ejemplo-antes-pie" aria-label="Ejemplo · antes del pie 728×90 / 320×100"><span class="ad-lab">Ejemplo · antes del pie 728×90 / 320×100</span><div class="ad-box"><a class="ad-img" href="#ejemplo" rel="noopener"><picture><source media="(max-width: 759px)" srcset="../assets/banners/ejemplo-320x100.svg" width="320" height="100"><img src="../assets/banners/ejemplo-728x90.svg" width="728" height="90" alt="Banner de ejemplo: no es un anuncio real" loading="lazy" decoding="async"></picture></a></div></aside>
+</main>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div class="fcol-main">
+      <p class="fbrand"><span class="mark" aria-hidden="true"></span>Neto y Bruto</p>
+      <h2>Aviso</h2>
+      <p>Resultados orientativos con la normativa general de 2026: no son asesoramiento laboral, fiscal ni jurídico y no sustituyen a tu nómina, a tu asesoría ni a los servicios oficiales (AEAT, Seguridad Social, SEPE, juzgados). Cifras revisadas el 23 de noviembre de 2026.</p>
+      <h2 class="mt">Privacidad</h2>
+      <p>Sin cookies, analítica ni rastreadores. Los cálculos se hacen en tu navegador y lo que escribes no se envía a ningún servidor.</p>
+    </div>
+    <div>
+      <h2>Calculadoras</h2>
+      <ul><li><a href="../sueldo-neto/">Sueldo neto</a></li><li><a href="../coste-empresa/">Coste empresa</a></li><li><a href="../retencion-irpf/">Retención IRPF</a></li><li><a href="../iva/">IVA</a></li><li><a href="../factura-autonomo/">Factura de autónomo</a></li><li><a href="../finiquito/">Finiquito</a></li><li><a href="../despido/">Despido</a></li><li><a href="../paro/">Paro</a></li><li><a href="../cuota-autonomos/">Cuota de autónomos</a></li><li><a href="../neto-a-bruto/">Del neto al bruto</a></li></ul>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <ul class="flegal"><li><a href="../aviso-legal/">Aviso legal</a></li><li><a href="../privacidad/">Privacidad</a></li><li><a href="../cookies/">Cookies</a></li></ul>
+    </div>
+  </div>
+  <p class="credit"><span>Titular: Damián Callejón Nogales (Enginai Global Solutions)</span><span>Diseño y desarrollo: <a href="https://enginaiglobalsolutions.com" rel="noopener">Enginai Global Solutions</a></span></p>
+</div></footer>
+<script src="../assets/ui.js"></script><script src="../assets/calc-extra.js"></script><script src="../assets/p-despido.js"></script>
+</body>
+</html>
